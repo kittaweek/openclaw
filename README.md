@@ -92,11 +92,12 @@ To let agents interact with your messaging accounts:
 2.  Send a message to your bot from the target device.
 3.  If pairing is required, use the CLI inside the container:
     ```bash
-    make cli cmd="openclaw pairing list"
-    make cli cmd="openclaw pairing approve <id>"
+    docker exec -it openclaw-gateway openclaw devices list
+    docker exec -it openclaw-gateway openclaw devices approve <REQUEST_ID>
     ```
-
 ---
+## Open mode Sandbox
+docker compose run --rm openclaw-cli config set agents.defaults.sandbox.mode non-main
 
 ## Further Reading
 Visit [docs.openclaw.ai](https://docs.openclaw.ai) for deep-dive configuration and security hardening.
