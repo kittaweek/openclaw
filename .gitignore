@@ -1,3 +1,9 @@
 .openclaw
 .env
 .env.dev
+
+secrets/*
+!secrets/.gitkeep
+
+workspace/*
+!workspace/.gitkeep
